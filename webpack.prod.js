@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const buildPath = path.resolve(__dirname, 'docs')
 
@@ -95,7 +96,10 @@ module.exports = {
     new FaviconsWebpackPlugin({
       logo: './src/images/favicon.svg',
       inject: true
-    })
+    }),
+    new CopyPlugin([
+      { from: 'CNAME', to: buildPath },
+    ]),
   ],
 
   // https://webpack.js.org/configuration/optimization/
