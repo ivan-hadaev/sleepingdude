@@ -7,7 +7,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
-const buildPath = path.resolve(__dirname, 'public')
+const buildPath = path.resolve(__dirname, 'docs')
 
 module.exports = {
 
