@@ -1,0 +1,44 @@
+{
+  "name": "sleepingdude",
+  "version": "1.0.0",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js --mode development",
+    "build": "webpack --config webpack.prod.js --mode production",
+    "preview": "npm run build && http-server -o",
+    "test": "standard"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "favicons-webpack-plugin": "^1.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.9.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "standard": "^14.3.1",
+    "style-loader": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  },
+  "standard": {
+    "env": [
+      "node",
+      "es6"
+    ]
+  },
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
+  }
+}

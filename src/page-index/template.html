@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!../partials/meta.html') %>
+</head>
+<body>
+<main class="page messages">
+  <div class="message">
+    Hey! Who is it? Hmm..
+    Anyway, welcome to my page!
+    <br>
+    Make yourself at home!
+  </div>
+  <div class="message">
+    Just take a look at these projects, okay?
+  </div>
+  <a class="logo" href="/">
+    <%= require('!!html-loader!../images/logo.svg') %>
+  </a>
+</main>
+</body>
+</html>

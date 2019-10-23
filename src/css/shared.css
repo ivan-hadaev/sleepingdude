@@ -1,0 +1,68 @@
+body {
+  font-size: 18px;
+  font-family: Inconsolata, monospace;
+  line-height: 1.5rem;
+  color: rgba(0, 0, 0, .75);
+  padding: 1rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .025);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 300px;
+  min-height: calc(100vh - 2rem);
+  padding: 1rem;
+  position: relative;
+}
+
+.icon {
+  padding: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgba(0, 0, 0, .025);
+  display: block;
+  position: relative;
+  border-radius: 2rem;
+  margin-bottom: .5rem;
+  color: currentColor !important;
+}
+
+.logo {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  color: currentColor !important;
+}
+
+.logo svg {
+  display: block;
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+
+.messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin-bottom: 1rem;
+  max-width: calc(100% - 3rem);
+  min-width: calc(6rem);
+  display: inline-block;
+  padding: 1rem;
+}
