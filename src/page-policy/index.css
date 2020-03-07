@@ -1,0 +1,6 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../css/shared.css";
+
+.privacy-policy {
+  font-size: 20px;
+}

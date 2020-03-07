@@ -8,8 +8,8 @@ module.exports = {
 
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
-    index: './src/page-index/main.js',
-    policy: './src/page-policy/main.js'
+    index: './src/page-index/index.css',
+    policy: './src/page-policy/index.css'
   },
 
   // https://webpack.js.org/configuration/dev-server/
@@ -59,14 +59,14 @@ module.exports = {
   // https://webpack.js.org/concepts/plugins/
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/page-index/template.html',
+      template: './src/page-index/index.html',
       inject: true,
       chunks: ['index'],
       filename: 'index.html'
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/page-policy/template.html',
+      template: './src/page-policy/index.html',
       inject: true,
       chunks: ['policy'],
       filename: 'policy.html'
@@ -74,7 +74,7 @@ module.exports = {
     new FaviconsWebpackPlugin({
       logo: './src/images/favicon.svg',
       inject: true,
-      devMode: 'webapp' // optional can be 'webapp' or 'light' - 'light' by default
+      devMode: 'light' // optional can be 'webapp' or 'light' - 'light' by default
     })
   ]
 }
