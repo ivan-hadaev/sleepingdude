@@ -54,6 +54,7 @@ body > footer {
   width: 4rem;
   height: 4rem;
   color: currentColor !important;
+  margin-top: auto;
 }
 
 .logo svg {
