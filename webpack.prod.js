@@ -11,7 +11,6 @@ const CopyPlugin = require('copy-webpack-plugin')
 const buildPath = path.resolve(__dirname, 'docs')
 
 module.exports = {
-
   // This option controls if and how source maps are generated.
   // https://webpack.js.org/configuration/devtool/
   devtool: 'source-map',
@@ -19,8 +18,7 @@ module.exports = {
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
     index: './src/page-index/main.js',
-    about: './src/page-about/main.js',
-    contacts: './src/page-contacts/main.js'
+    policy: './src/page-policy/main.js'
   },
 
   // how to write the compiled files to disk
@@ -43,10 +41,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader'
-        ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
         test: /\.txt$/i,
@@ -78,16 +73,10 @@ module.exports = {
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/page-about/template.html',
-      inject: 'body',
-      chunks: ['about'],
-      filename: 'about.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/page-contacts/template.html',
-      inject: 'body',
-      chunks: ['contacts'],
-      filename: 'contacts.html'
+      template: './src/page-policy/template.html',
+      inject: true,
+      chunks: ['policy'],
+      filename: 'policy.html'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
@@ -97,9 +86,7 @@ module.exports = {
       logo: './src/images/favicon.svg',
       inject: true
     }),
-    new CopyPlugin([
-      { from: 'CNAME', to: buildPath },
-    ]),
+    new CopyPlugin([{ from: 'CNAME', to: buildPath }])
   ],
 
   // https://webpack.js.org/configuration/optimization/

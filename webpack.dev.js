@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
-
   // This option controls if and how source maps are generated.
   // https://webpack.js.org/configuration/devtool/
   devtool: 'eval-cheap-module-source-map',
@@ -10,8 +9,7 @@ module.exports = {
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
     index: './src/page-index/main.js',
-    about: './src/page-about/main.js',
-    contacts: './src/page-contacts/main.js'
+    policy: './src/page-policy/main.js'
   },
 
   // https://webpack.js.org/configuration/dev-server/
@@ -61,22 +59,17 @@ module.exports = {
   // https://webpack.js.org/concepts/plugins/
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/page-contacts/template.html',
-      inject: true,
-      chunks: ['contacts'],
-      filename: 'contacts.html'
-    }),
-    new HtmlWebpackPlugin({
       template: './src/page-index/template.html',
       inject: true,
       chunks: ['index'],
       filename: 'index.html'
     }),
+
     new HtmlWebpackPlugin({
-      template: './src/page-about/template.html',
+      template: './src/page-policy/template.html',
       inject: true,
-      chunks: ['about'],
-      filename: 'about.html'
+      chunks: ['policy'],
+      filename: 'policy.html'
     }),
     new FaviconsWebpackPlugin({
       logo: './src/images/favicon.svg',

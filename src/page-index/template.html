@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%= require('html-loader!../partials/meta.html') %>
-</head>
-<body>
-<main class="page messages">
-  <div class="message">
-    Hey! Who is it? Hmm..
-    Anyway, welcome to my page!
-    <br>
-    Make yourself at home!
-  </div>
-  <div class="message">
-    Just take a look at these projects, okay?
-  </div>
-  <a class="logo" href="/">
-    <%= require('!!html-loader!../images/logo.svg') %>
-  </a>
-</main>
-</body>
+  <head>
+    <%= require('html-loader!../partials/meta.html') %>
+  </head>
+  <body>
+    <main class="page messages">
+      <div class="message">
+        Hey! Who is it? Hmm.. Anyway, welcome to my page! <br />
+        Make yourself at home!
+      </div>
+      <div class="message">Just take a look at these projects, okay?</div>
+      <div class="message">
+        <a
+          href="https://chrome.google.com/webstore/detail/pckkddchhdhkfapanbkcalloijbbjhbd"
+          >VK Blue</a
+        >
+        - equalizer, scrobbler and lyrics finder for music on vk.com
+      </div>
+
+      <div class="message">
+        <a
+          href="https://chrome.google.com/webstore/detail/egmilngkgddnnmkpkonkpkjkipiihmkh"
+          >Music Storm</a
+        >
+        - visualizer for any site.
+      </div>
+
+      <div class="message">
+        <a
+          href="https://chrome.google.com/webstore/detail/fncgbdbkhdhdcfiohjnbdfebholmhnkh"
+          >YouTube Gears</a
+        >
+        - equalizer, filters and gif creator for youtube.com.
+      </div>
+      <a class="logo" href="/">
+        <%= require('!!html-loader!../images/logo.svg') %>
+      </a>
+    </main>
+    <%= require('!!html-loader!../partials/footer.html') %>
+  </body>
 </html>
